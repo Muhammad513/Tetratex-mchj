@@ -18,3 +18,5 @@
 
 # info app
   `bu info appi barcha kiritilgan malumotlarni ko'rish bo'limi bo'lib bunda korxonaning filiali da ishlayabturgan barcha ishchilarning va hodimlarning malumotlari hamda ishga kelib ketish, ro'yhati bilan  tanish va korish mumkun.hodim va ishchilarning o'zi ham kirib qancha oylik ishlanyabturganini ko'rish mumkun.` 
+![alt text](scrin/1.jpg)
+![alt text](scrin/2.jpg)  
