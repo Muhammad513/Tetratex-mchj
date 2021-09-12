@@ -1,0 +1,21 @@
+{% load info_tags %}
+<div class="ui top attached demo menu inverted">
+    <a id="toggle" class="item">
+      <i class="sidebar icon large"></i>
+      Menu
+    </a>
+    <div class="item floated right">
+      <div class="ui small basic inverted icon buttons">
+        <button class="ui button"><i class="user large icon text-primary"></i></button>
+        <button class="ui button"><i class="sign-out  icon text-white large"></i></button>
+      </div>
+    </div>
+</div>
+<div class="ui sidebar inverted vertical menu">
+  {% for i in sidebar %}
+    <a href="{% url i.url_name %}" class="item">
+      <i class="{{i.icon_name}}"></i>
+      {{i.title}}
+    </a>
+  {% endfor %}    
+</div>

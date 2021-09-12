@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load info_tags %}
+{% block content %}
+<div class="ui container">
+    {% show_menu %}
+    <div class="ui bottom inverted attached segment">
+            <h2 class="ui icon header col-md-12" >
+                <div class="content text-primary">
+                  Online Tabel
+                <div class="sub header text-white">BOSTON PTM</div>
+              </div>
+            </h2>
+            <table class="ui selectable inverted table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Status</th>
+                  <th class="right aligned">Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for i in tabel %}
+                <tr>
+                  <td>{{i.staff.first_name}}</td>
+                  <td>{{i.public}}</td>
+                  <td>{{i.date}}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+    </div>        
+</div>            
+{% endblock content %}

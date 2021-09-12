@@ -1,0 +1,15 @@
+<div class="ui inverted menu mt-2 ">
+    {% for i in submenu %}
+    <a href="{% url i.url_name %}" class="item"><i class="{{i.icon_name}}"></i> | {{i.title}} |</a>
+    {% endfor %}
+
+    <div class="right menu">
+        <div class="ui right aligned category search item">
+          <div class="ui transparent icon input">
+            <input class="prompt" type="text" placeholder="Search animals...">
+            <i class="search link icon text-danger"></i>
+          </div>
+          <div class="results"></div>
+        </div>
+      </div>
+</div>

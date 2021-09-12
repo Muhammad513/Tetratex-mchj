@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load info_tags %}
+{% block content %}
+<div class="ui container">
+    {% show_menu %}
+    <div class="ui bottom inverted attached segment">
+        
+            <h2 class="ui icon header col-md-12">
+                <i class="users icon text-white"></i>
+                <div class="content text-primary">
+                  TETRATEX MCHJ GA QARASHLI
+                  <div class="sub header text-white">BOSTON PTM JAMOASI</div>
+              </div>
+            </h2>
+            <div class="row">  
+            {% for card in cards %}
+            <div class="col-md-3 ui special cards mt-1">
+                <div class="card" style="height: 330px;">
+                  <div class="blurring dimmable image">
+                    <div class="ui dimmer">
+                      <div class="content">
+                        <div class="center">
+                          <div class="ui inverted button">Маълумот</div>
+                        </div>
+                      </div>
+                    </div>
+                    <img class="img-thumbnail" src="{{card.image.url}}" style="width: 240px; height: 200px;">
+                  </div>
+                  <div class="content">
+                    <a class="header">{{card.first_name}} {{ card.last_name }}</a>
+                    <div class="meta">
+                      <span class="date"><i class="birthday cake icon ml-1"></i>{{card.birthday}}</span>
+                    </div>
+                  </div>
+                  <div class="extra content">
+                    <a>
+                      <i class="users icon"></i>
+                      2 Members
+                    </a>
+                  </div>
+                </div>
+            </div>
+            {%endfor%}    
+        </div>
+    </div>    
+</div>
+{% endblock content %}
